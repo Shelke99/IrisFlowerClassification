@@ -1,0 +1,23 @@
+<html>
+    <body>
+      <form action="/predict" method="POST">
+        Sepal Length: <input type="text" name="sepal_length"><br>
+        Sepal Width: <input type="text" name="sepal_width"><br>
+        Petal Length: <input type="text" name="petal_length"><br>
+        Petal Width: <input type="text" name="petal_width"><br>
+        {% if setosa%}
+          <div class="alert alert-primary">{{setosa}}</div>
+        {% elif versicolor %}
+          <div class="alert alert-primary">{{versicolor}}</div>
+        {% elif virginica %}
+          <div class="alert alert-primary">{{virginica}}</div>
+        {% endif %}
+
+
+        <!-- Class: {{result}}<br> -->
+
+        <input type="submit" value="predict">
+
+      </form>  
+    </body>
+</html>
